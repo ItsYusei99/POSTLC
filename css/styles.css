@@ -1,0 +1,44 @@
+* { font-family: 'DM Sans', sans-serif; color-scheme: dark; } /* Fuerza fondos oscuros nativos */
+html, body { height: 100%; margin: 0; box-sizing: border-box; }
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-thumb { background: #ff0000; border-radius: 3px; } /* Scrollbar rojo */
+::-webkit-scrollbar-track { background: transparent; }
+
+/* === CONTORNOS NATURALES Y ELEGANTES === */
+div.bg-surface.rounded-xl.border {
+  border-width: 1px !important;
+  border-color: #1a1a1a !important; /* Borde oscuro */
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.05) !important; /* Sombra rojiza muy suave */
+}
+
+tr.border-b {
+  border-bottom-width: 1px !important;
+  border-color: #1a1a1a !important; /* Separador de tablas oscuro */
+}
+/* ======================================= */
+@keyframes fadeIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+.fade-in { animation: fadeIn .3s ease-out; }
+@keyframes slideUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+.slide-up { animation: slideUp .35s ease-out; }
+@keyframes modalIn { from { opacity:0; transform:scale(0.9); } to { opacity:1; transform:scale(1); } }
+.modal-show { animation: modalIn .3s ease-out; }
+.toast-show { animation: fadeIn .3s ease-out; }
+.pos-grid { display: grid; grid-template-columns: 1fr 380px; height: 100%; }
+@media (max-width: 900px) { .pos-grid { grid-template-columns: 1fr; } }
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; }
+
+/* REGLAS PARA IMPRESORA TÉRMICA Y ETIQUETAS */
+@media print {
+  body * { visibility: hidden !important; }
+  
+  /* Oculta uno u otro dependiendo de qué botón presiones */
+  body.printing-barcode #printable-ticket { display: none !important; }
+  body:not(.printing-barcode) #printable-barcode { display: none !important; }
+  
+  #printable-ticket, #printable-ticket * { visibility: visible !important; }
+  #printable-ticket { position: absolute; left: 0; top: 0; width: 100%; margin: 0; padding: 0; box-shadow: none !important; }
+  
+  #printable-barcode, #printable-barcode * { visibility: visible !important; }
+  #printable-barcode { position: absolute; left: 0; top: 0; width: 100%; margin: 0; padding: 0; box-shadow: none !important; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+}
