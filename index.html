@@ -11,23 +11,32 @@
   <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Geist:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <script>
   tailwind.config = {
     theme: {
       extend: {
+        fontFamily: {
+          sans: ['Outfit', 'sans-serif'],
+          geist: ['Geist', 'sans-serif']
+        },
         colors: {
-          bg: '#050505',       // Casi negro absoluto
-          surface: '#111111',  // Gris súper oscuro (Tarjetas y modales)
-          card: '#1a1a1a',     // Gris oscuro (Bordes e inputs)
-          accent: '#ff0000',   // Rojo puro (Botones principales)
-          accent2: '#cc0000',  // Rojo más oscuro
-          danger: '#ef4444',   // Rojo alerta
-          success: '#10b981',  // Verde (Dinero)
-          warn: '#f59e0b',     // Naranja (Alertas)
-          txt: '#ffffff',      // Blanco (Texto general)
-          muted: '#9ca3af'     // Gris desaturado (Texto secundario)
+          bg: '#05020a',       // Negro-Morado profundo
+          surface: 'rgba(12, 8, 24, 0.7)',   // Superficie morada translúcida
+          card: 'rgba(22, 16, 38, 0.5)',      // Inputs y bordes translúcidos
+          accent: '#a855f7',   // Púrpura brillante neon (Purple-500)
+          accent2: '#9333ea',  // Púrpura más oscuro (Purple-600)
+          danger: '#f43f5e',   // Danger Crimson
+          success: '#10b981',  // Emerald Green
+          warn: '#fbbf24',     // Amber Yellow
+          txt: '#fafafa',      // Blanco roto
+          muted: '#a78bfa'     // Lavanda desaturado para textos mutados
+        },
+        boxShadow: {
+          'premium': '0 8px 32px 0 rgba(0, 0, 0, 0.5)',
+          'glow': '0 0 20px rgba(168, 85, 247, 0.25)',
+          'glow-success': '0 0 20px rgba(16, 185, 129, 0.15)'
         }
       }
     }

@@ -11,8 +11,8 @@ export function renderLogin() {
     : `<div class="w-16 h-16 bg-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-4"><i data-lucide="shopping-bag" class="w-8 h-8 text-accent"></i></div>`;
     
   app.innerHTML = `
-  <div class="h-full w-full flex items-center justify-center p-4" style="background: radial-gradient(circle at center, #2a0000 0%, #050505 100%);">
-    <div class="bg-surface rounded-2xl p-8 w-full max-w-md fade-in border border-card" style="box-shadow: 0 15px 35px -10px rgba(255,0,0,0.15), 0 0 15px rgba(0,0,0,0.5);">
+  <div class="h-full w-full flex items-center justify-center p-4" style="background: radial-gradient(circle at center, #2e1065 0%, #05020a 100%);">
+    <div class="bg-surface rounded-2xl p-8 w-full max-w-md fade-in border border-card" style="box-shadow: 0 15px 35px -10px rgba(168,85,247,0.2), 0 0 25px rgba(0,0,0,0.6);">
       <div class="text-center mb-8">
         ${logoHtml}
         <h1 class="text-2xl font-bold">${bizName()}</h1>
